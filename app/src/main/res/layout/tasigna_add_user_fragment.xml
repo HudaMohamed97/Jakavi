@@ -84,7 +84,7 @@
             android:layout_height="40dp"
             android:layout_margin="10dp"
             android:background="@drawable/editbox"
-            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            android:theme="@style/ThemeOverlay.AppCompat.Dialog"
             app:hintText="Region" />
 
 
@@ -232,7 +232,7 @@
             android:layout_height="40dp"
             android:layout_margin="10dp"
             android:background="@drawable/editbox"
-            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            android:theme="@style/ThemeOverlay.AppCompat"
             android:visibility="gone"
             app:hintText="Switch To" />
 
