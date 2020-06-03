@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".jakavi.JakaviHome"
+    android:background="@drawable/jakavi_bg">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/top">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/jakavi_topbar"
+            android:adjustViewBounds="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_margin="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:src="@drawable/jakavi_logo"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:src="@drawable/revolade_logo"
+                android:adjustViewBounds="true"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/graphYellow"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom"/>
+
+    <RelativeLayout
+        android:id="@+id/below_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_marginTop="-20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Home"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="LogOut"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/below_top"
+        android:layout_above="@id/bottom"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+
+
+    <LinearLayout
+        android:id="@+id/graphContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/jakavi_titlebg"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jakavi"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginRight="60dp"
+                android:textColor="@color/white"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Target"
+                    android:textSize="22sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/targettxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="38"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scored"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/scoredtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorAccent"
+                    android:text="35"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unscored"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/unscoredtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/graphYellow"
+                    android:text="3"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+        <com.razerdp.widget.animatedpieview.AnimatedPieView
+            android:id="@+id/animatedPieView"
+            android:layout_width="wrap_content"
+            android:layout_height="240dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/jakavi_addpatient"
+        android:layout_below="@+id/graphContainer"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

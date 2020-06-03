@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.Login"
+    android:background="@drawable/jakavi_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/top">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/jakavi_topbar"
+            android:adjustViewBounds="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_margin="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:src="@drawable/jakavi_logo"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:src="@drawable/revolade_logo"
+                android:adjustViewBounds="true"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/graphYellow"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_below="@+id/top"
+        android:layout_above="@+id/bottom"
+        >
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bg"
+            android:gravity="center"
+            android:hint="Username"
+            android:inputType="textEmailAddress"
+            android:drawableLeft="@drawable/ic_username"
+            android:padding="2dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittext_bg"
+            android:gravity="center"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/ic_password"
+            android:padding="2dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="16sp" />
+
+
+        <CheckBox
+            android:id="@+id/chckRemember"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/white"
+            android:checked="true"
+            android:text="remember me"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/login"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

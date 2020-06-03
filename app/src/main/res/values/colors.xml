@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4a3292</color>
+    <color name="colorPrimaryDark">#262626</color>
+    <color name="colorAccent">#ed273b</color>
+
+
+    <color name="white">#FEFEFE</color>
+    <color name="gray">#BFC2C2C2</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="edittext_border">#262626</color>
+    <color name="edittext_bg">#be8d10</color>
+    <color name="graphYellow">#fcb419</color>
+    <color name="green">#4CAF50</color>
+    <color name="red">#C90000</color>
+    <color name="patient_text2">#6f2526</color>
+    <color name="patient_text1">#0f387c</color>
+
+</resources>

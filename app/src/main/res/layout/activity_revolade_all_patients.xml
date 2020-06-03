@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".revolade.RevoladeAllPatients"
+    android:background="@drawable/revolade_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/top">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_margin="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:src="@drawable/revolade_logo2"
+                android:adjustViewBounds="true"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/graphYellow"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom"/>
+
+    <RelativeLayout
+        android:id="@+id/below_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Patients List"
+            android:textColor="@color/colorPrimary"
+            android:textSize="22dp"
+            android:textStyle="bold"/>
+
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/colorPrimary"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/below_top"
+        android:layout_above="@id/bottom"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/chooseDr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose Doctor"
+            android:background="@drawable/listitem_bg"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/patientsRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>
