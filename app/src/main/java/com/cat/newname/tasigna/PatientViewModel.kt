@@ -6,7 +6,6 @@ import com.example.catapplication.models.DoctorsResponse
 import com.example.catapplication.models.PatientModelResponce
 import com.example.catapplication.models.UserDoctorsResponse
 import com.example.catapplication.network.AddFragmentRepository
-import okhttp3.ResponseBody
 
 class PatientViewModel : ViewModel() {
     private var addFragmentRepository: AddFragmentRepository = AddFragmentRepository()

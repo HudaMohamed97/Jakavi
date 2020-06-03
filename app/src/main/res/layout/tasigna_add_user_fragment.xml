@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tasigna_login"
+    android:id="@+id/mainLayout"
+    android:clickable="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:adjustViewBounds="true"
+                android:src="@drawable/tasigna_logo"
+                android:visibility="invisible" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/below_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Add Patient"
+            android:textColor="@color/colorpuplr"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:src="@drawable/ic_back"
+            android:tint="@color/colorpuplr" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/below_top"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="@dimen/space_20"
+        android:layout_marginRight="30dp"
+        android:background="#BFC2C2C2"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spinnerRegion"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/editbox"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            app:hintText="Region" />
+
+
+        <TextView
+            android:id="@+id/cityText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editbox"
+            android:clickable="true"
+            android:padding="10dp"
+            android:text="City"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spinnerCity"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/editbox"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            android:visibility="gone"
+            app:hintText="City" />
+
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spinnerHospital"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/editbox"
+            android:clickable="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            app:hintText="Hospital" />
+
+
+        <TextView
+            android:id="@+id/doctorText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editbox"
+            android:clickable="true"
+            android:padding="11dp"
+            android:text="Doctor Name"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spinnerDoctorName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/editbox"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:spinnerMode="dropdown"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            android:visibility="gone"
+            app:hintText="Doctor Name" />
+
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spinnerCml"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/editbox"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            app:hintText="CMl" />
+
+
+        <TextView
+            android:id="@+id/doseText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editbox"
+            android:clickable="true"
+            android:padding="11dp"
+            android:text="Dose"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spinnerDose"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/editbox"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            android:visibility="gone"
+            app:hintText="Dose" />
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spinnersDropReasons"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/editbox"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            android:visibility="gone"
+            app:hintText="Reason of drop" />
+
+        <TextView
+            android:id="@+id/noteText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="Type Notes"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/white_rounded_button"
+            android:gravity="left"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:visibility="gone"
+            tools:ignore="RtlHardcoded" />
+
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spinnerSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/editbox"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            android:visibility="gone"
+            app:hintText="Switch To" />
+
+
+        <ImageView
+            android:id="@+id/btn_Add"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="@dimen/space_24"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="@dimen/space_24"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:src="@drawable/addpatient"
+            android:text="Add"
+            android:textColor="@color/cardview_light_background"
+            app:layout_constraintTop_toBottomOf="@+id/animatedPieView" />
+
+
+    </LinearLayout>
+</RelativeLayout>
