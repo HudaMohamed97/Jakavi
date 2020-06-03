@@ -4,6 +4,7 @@ import android.app.ProgressDialog
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -127,7 +128,7 @@ class TasignaPatientsActivity : AppCompatActivity() {
                 hideLoader()
                 Toast.makeText(
                         this,
-                        " there is an Error Occurs Wrong User or password",
+                        " there is an Error Occurred",
                         Toast.LENGTH_SHORT
                 )
                         .show()
@@ -220,6 +221,7 @@ class TasignaPatientsActivity : AppCompatActivity() {
     }
 
     private fun getUserId(): Int {
+        Log.i("hhh", "" + shared.getInt("id", 0))
         return shared.getInt("id", 0)
     }
 

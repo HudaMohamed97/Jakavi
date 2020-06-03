@@ -121,7 +121,8 @@
             android:background="@drawable/editbox"
             android:clickable="true"
             android:theme="@style/ThemeOverlay.AppCompat.Light"
-            app:hintText="Hospital" />
+            app:hintText="Hospital"
+            android:focusable="true" />
 
 
         <TextView

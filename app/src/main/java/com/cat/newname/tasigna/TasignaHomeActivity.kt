@@ -1,6 +1,7 @@
 package com.cat.newname.tasigna
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.ImageView
@@ -56,20 +57,20 @@ class TasignaHomeActivity : AppCompatActivity() {
                 .pieRadius(200f)
                 .pieRadiusRatio(0.8f)
 
-         config.addData(
-                 SimplePieInfo(
-                         unscored.toDouble(),
-                         ContextCompat.getColor(this, R.color.red),
-                         "" + df2.format(unscoredPrecentage) + " %"
-                 )
-         )
-                 .addData(
-                         SimplePieInfo(
-                                 score.toDouble(),
-                                 ContextCompat.getColor(this, R.color.yellow),
-                                 "" + df2.format(scoredPercentage) + " %"
-                         )
-                 )
+        config.addData(
+                SimplePieInfo(
+                        unscored.toDouble(),
+                        ContextCompat.getColor(this, R.color.red),
+                        "" + df2.format(unscoredPrecentage) + " %"
+                )
+        )
+                .addData(
+                        SimplePieInfo(
+                                score.toDouble(),
+                                ContextCompat.getColor(this, R.color.yellow),
+                                "" + df2.format(scoredPercentage) + " %"
+                        )
+                )
         mAnimatedPieView.applyConfig(config)
         mAnimatedPieView.start()
     }
@@ -77,22 +78,25 @@ class TasignaHomeActivity : AppCompatActivity() {
     private fun addButtonAction() {
         val button = findViewById<ImageView>(R.id.btn_Add)
         button.setOnClickListener {
-            /* var bundle = bundleOf("fromFragment" to "fromAdd")
-             findNavController().navigate(R.id.action_HomeFragment_to_AddFragment, bundle)*/
+            startActivity(Intent(this, TasignaAddPatient::class.java)
+                    .putExtra("fromFragment", "fromAdd"))
         }
     }
 
     private fun dropButtonPatientUser() {
+
         val dropButton = findViewById<ImageView>(R.id.btn_drop)
         dropButton.setOnClickListener {
-            //  findNavController().navigate(R.id.action_HomeFragment_to_PatientFragment)
+            startActivity(Intent(this, TasignaPatientsActivity::class.java)
+                    .putExtra("fromFragment", "fromDrop"))
         }
     }
 
     private fun switchButtonPatientUser() {
         val dropButton = findViewById<ImageView>(R.id.btn_Switch)
         dropButton.setOnClickListener {
-            // findNavController().navigate(R.id.action_HomeFragment_to_PatientFragment)
+            startActivity(Intent(this, TasignaPatientsActivity::class.java)
+                    .putExtra("fromFragment", "fromSwitch"))
         }
     }
 }

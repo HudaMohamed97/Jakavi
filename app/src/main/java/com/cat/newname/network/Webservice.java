@@ -32,7 +32,7 @@ public class Webservice {
         httpClient.readTimeout(160, TimeUnit.SECONDS);
         httpClient.addInterceptor(logging);
         Retrofit retrofit = new Retrofit.Builder()
-                .client(okHttpClient)
+                .client(httpClient.build())
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .baseUrl(MAIN_URL)
                 .build();

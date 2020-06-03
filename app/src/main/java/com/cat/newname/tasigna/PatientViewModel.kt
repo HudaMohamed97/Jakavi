@@ -4,7 +4,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.catapplication.models.DoctorsResponse
 import com.example.catapplication.models.PatientModelResponce
-import com.example.catapplication.models.UserDoctorsResponse
 import com.example.catapplication.network.AddFragmentRepository
 
 class PatientViewModel : ViewModel() {

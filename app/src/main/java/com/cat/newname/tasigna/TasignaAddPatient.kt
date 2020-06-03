@@ -11,6 +11,7 @@ import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import com.cat.newname.R
 import com.example.catapplication.models.*
 import com.toptoche.searchablespinnerlibrary.SearchableSpinner
@@ -56,10 +57,11 @@ class TasignaAddPatient : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tasigna_add_user_fragment)
+        addFragmentViewModel = ViewModelProviders.of(this).get(AddActivityViewModel::class.java)
+        setViews()
         back.setOnClickListener { onBackPressed() }
         FromFragment = intent?.getStringExtra("fromFragment").toString()
         PatientId = intent?.getIntExtra("patientId", 0)!!
-        setViews()
         setListener()
         if (FromFragment == "fromAdd") {
             getRegionsList()
@@ -282,11 +284,11 @@ class TasignaAddPatient : AppCompatActivity() {
         }
 
         addButton = findViewById(R.id.btn_Add)
+        back = findViewById(R.id.back)
         spinnersDropReasons = findViewById(R.id.spinnersDropReasons)
         noteTitle = findViewById(R.id.noteText)
         noteText = findViewById(R.id.result)
         title = findViewById(R.id.title)
-        back = findViewById(R.id.back)
         mainLayout = findViewById(R.id.mainLayout) as View
     }
 

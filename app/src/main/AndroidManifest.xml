@@ -49,6 +49,9 @@
             android:name=".tasigna.TasignaPatientsActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".tasigna.TasignaAddPatient"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".revolade.RevoladeAddPatient"
             android:screenOrientation="portrait" />
         <activity
