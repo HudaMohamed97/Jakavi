@@ -24,6 +24,7 @@ import com.cat.newname.R;
 import com.cat.newname.network_interface.ServiceInterface;
 import com.cat.newname.jakavi.JakaviHome;
 import com.cat.newname.revolade.RevoladeHome;
+import com.cat.newname.tasigna.TasignaHomeActivity;
 
 import org.json.JSONObject;
 
@@ -127,7 +128,8 @@ public class Login extends AppCompatActivity {
                             }
                             myEdit.commit();
                             if (userData.getString("type").equals("jakavi")) {
-                                Intent i = new Intent(getApplicationContext(), JakaviHome.class);
+                                //Intent i = new Intent(getApplicationContext(), JakaviHome.class);
+                                Intent i = new Intent(getApplicationContext(), TasignaHomeActivity.class);
                                 startActivity(i);
                             } else {
                                 Intent i = new Intent(getApplicationContext(), RevoladeHome.class);
